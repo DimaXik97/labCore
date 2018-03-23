@@ -1,0 +1,6 @@
+#!/bin/bash
+cd CarService.WebApi
+pwd
+echo $(dotnet build)
+echo $(dotnet ef migrations add $1 -p '../CarService.Repository')
+echo $(dotnet ef database update)
